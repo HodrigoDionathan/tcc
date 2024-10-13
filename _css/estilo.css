@@ -56,7 +56,7 @@ header#cabecalho{
 
 	border-bottom: 1px gray solid ;
 	height: 220px;
-	background: url("../_imagens/logotecnico.png") no-repeat 0px 80px; /* <<===aqui altera logo google glass*/
+	background: url("../imagens/logotecnico.png") no-repeat 0px 80px; /* <<===aqui altera logo google glass*/
 }
 
 header#cabecalho h1 {

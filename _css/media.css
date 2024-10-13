@@ -4,7 +4,7 @@ div#tv-radio {
 	width: 1000px;
 	height: 580px;
 	margin: auto;
-	background: url("../_imagens/telao.png.png")no-repeat;
+	background: url("../imagens/telao.png.png")no-repeat;
 }
 
 video#filme{
