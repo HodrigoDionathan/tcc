@@ -1,13 +1,13 @@
 @charset"UTF-8";
 @font-face {
 	font-family:'Arial,sans-serif;' ;
-	src: url("../_fonts/roboto-light.ttf");
+	src: url("fonts/roboto-light.ttf");
 
 }
 
 body{
 		font-family:Arial,sans-serif;
-		src: url("../_fonts/roboto-light.ttf");
+		src: url("fonts/roboto-light.ttf");
 			background-color: #dddddd;
 			color: rgba(50,20,105.1);
 }
@@ -56,7 +56,7 @@ header#cabecalho{
 
 	border-bottom: 1px gray solid ;
 	height: 220px;
-	background: url("../imagens/logotecnico.png") no-repeat 0px 80px; /* <<===aqui altera logo google glass*/
+	background: url("imagens/logotecnico.png") no-repeat 0px 80px; /* <<===aqui altera logo google glass*/
 }
 
 header#cabecalho h1 {
