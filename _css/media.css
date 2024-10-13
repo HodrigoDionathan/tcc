@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+div#tv-radio {
+	width: 1000px;
+	height: 580px;
+	margin: auto;
+	background: url("../_imagens/telao.png.png")no-repeat;
+}
+
+video#filme{
+	display: block;
+	position: relative;
+	left: 80px;
+	top: 100px;
+	width: 650px;
+}
