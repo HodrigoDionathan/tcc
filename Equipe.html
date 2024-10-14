@@ -2,143 +2,182 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8"/>
-    <title>Tudo sobre o Projeto</title>
-    <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
-    <link rel="stylesheet" type="text/css" href="css/Equipe.css"/>
+    <title>Tudo sobre Técnicos por Vocação</title>
+    <link rel="stylesheet" type="text/css" href="css\estilo.css"/>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        #membros {
+            display: flex;
+            justify-content: space-between;
+        }
+        .coluna {
+            display: flex;
+            flex-direction: column;
+            width: 48%;
+        }
+        .membro {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .membro img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        .info {
+            font-size: 14px;
+        }
+        #rodape {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
 </head>
-<script language="javascript" src="javascript/funcoes.js"></script>
+
 <body>
+    <div id="interface">
+        <div id="logotipo" style="display: flex; align-content: center; justify-content: center; flex-direction: row;">
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="specs.html">Especificações</a></li>
+                    <li><a href="fotos.html">Fotos</a></li>
+                    <li><a href="multimidia.html">Multimídia</a></li>
+                    <li><a href="fale-conosco.html">Fale conosco</a></li>
+                    <li><a href="Equipe.html">Equipe</a></li>
+                </ul>
+            </nav>
+            <img src="imagens/logotecnico.png" alt="Logotipo">
+        </div>
+        
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Técnicos Por Vocação</h1>
+                <h2>Análise de Viabilidade de Motores Elétricos</h2>
+            </hgroup>
+            <img id="icone" src="imagens/equipe1.png"/>
+        </header>
 
-<div id="interface">
-
-    <header id="cabecalho">
-        <hgroup>
-            <h1>Técnicos Por Vocação</h1>
-            <h2>Análise de Viabilidade de Motores Elétricos</h2>
-        </hgroup>
-
-        <img id="icone" src="imagens/equipe1.png"/>
-
-        <nav id="menu">
-            <h1>Menu Principal</h1>
-            <ul>
-               <li onmouseover="mudaFoto('imagens/home.png')" onmouseout="mudaFoto('imagens/equipe1.png')">
-                    <a href="index.html">Home</a></li>
-                <li onmouseover="mudaFoto('imagens/especificacoes.png')" onmouseout="mudaFoto('imagens/equipe1.png')">
-                    <a href="specs.html">Especificações</a></li>
-                <li onmouseover="mudaFoto('imagens/fotos.png')" onmouseout="mudaFoto('imagens/equipe1.png')">
-                    <a href="fotos.html">Fotos</a></li>
-                <li onmouseover="mudaFoto('imagens/multimidia.png')" onmouseout="mudaFoto('imagens/equipe1.png')">
-                    <a href="multimidia.html">Multimídia</a></li>
-                <li onmouseover="mudaFoto('imagens/icone-contato.png')" onmouseout="mudaFoto('imagens/equipe1.png')">
-                    <a href="fale-conosco.html">Fale conosco</a></li>
-                <li onmouseover="mudaFoto('imagens/equipe1.png')" onmouseout="mudaFoto('imagens/equipe1.png')">
-                <a href="Equipe.html">Equipe</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-    <section corpo-full>
-        <article id="noticia-principal">
-            <header id="cabecalho-artigo">
-                <hgroup>
-                    <h3>Técnicos Por Vocação > Equipe</h3>
-                    <h1>Equipe</h1>
-                    <h2>por Técnicos Por Vocação</h2>
-                    <h3 class="direita">Atualizado em 15/Dezembro/2024</h3>
-                </hgroup>
-            </header>
-
-            <!-- Espaços para os membros da equipe divididos em duas colunas -->
-            <div id="membros">
-                <!-- Coluna da esquerda -->
-                <div class="coluna">
-                    <div class="membro">
-                        <img src="imagens/brunopadovan.png" alt="Bruno Padovani">
-                        <div class="info">
-                           BRUNO PADOVANI <br>Técnico:<br>Eletrotécnico.<br> Eletrica Automotiva.<br>Experiência: 2 Anos na área Eletronica.                 
-                        </div>
-                    </div>
-                    <div class="membro">
-                        <img src="imagens/Rodrigo.png" alt="Hódrigo Dionathan">
-                        <div class="info">
-                           HÓDRIGO DIONATHAN <br>Técnico: Segurança do Trabalho.  Refrigeração Industrial.  Eletrotécnico. <br>Cursando Engenharia de Software. <br>5 Anos de Experiência em Desenvolvimento Web & Desing
+        <section corpo-full>
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    <hgroup>
                         
+                        <h2>Equipe</h2>
+                    </hgroup>
+                </header>
+
+                <!-- Espaços para os membros da equipe divididos em duas colunas -->
+                <div id="membros">
+                    <!-- Coluna da esquerda -->
+                    <div class="coluna">
+                        <div class="membro">
+                            <img src="imagens/brunopadovan.png" alt="Bruno Padovani">
+                            <div class="info">
+                                <strong>BRUNO PADOVANI</strong><br>
+                                Técnico: Eletrotécnico.<br>
+                                Eletrica Automotiva.<br>
+                                Experiência: 2 Anos na área Eletrônica.
+                            </div>
+                        </div>
+
+                        <div class="membro">
+                            <img src="imagens/Rodrigo.png" alt="Hódrigo Dionathan">
+                            <div class="info">
+                                <strong>HÓDRIGO DIONATHAN</strong><br>
+                                Técnico: Segurança do Trabalho, Refrigeração Industrial, Eletrotécnico.<br>
+                                Cursando Engenharia de Software.<br>
+                                5 Anos de Experiência em Desenvolvimento Web & Design.
+                            </div>
+                        </div>
+
+                        <div class="membro">
+                            <img src="imagens/joao.png" alt="João Henrique">
+                            <div class="info">
+                                <strong>JOÃO HENRIQUE</strong><br>
+                                CEO da HVAC-R JHR Service.<br>
+                                Técnico: Eletrotécnico, Edificações, Refrigeração Industrial & Climatização, Mecânico Refrigeração Automotivo.
+                            </div>
+                        </div>
+
+                        <div class="membro">
+                            <img src="imagens/flavio.jpg" alt="Flavio">
+                            <div class="info">
+                                <strong>FLAVIO ROBERTO RODRIGUES DE CASTRO</strong><br>
+                                Técnico: Eletrotécnico.<br>
+                                Bombeiros hidráulico, Soldador, Eletrodutos Revestido.
+                            </div>
+                        </div>
+
+                        <div class="membro">
+                            <img src="imagens/hugo1.png" alt="Hugo">
+                            <div class="info">
+                                <strong>HUGO ALMEIDA</strong><br>
+                                Técnico: Eletrotécnico.<br>
+                                10 Anos de Experiência na Área de Alvenaria.<br>
+                                Modelista Gráfico/Sketchup/AutoCad 2D & 3D.
+                            </div>
                         </div>
                     </div>
 
-                    <div class="membro">
-                        <a href="https://www.instagram.com/jhs.hvacr.brasil/?igsh=MTBrd2RnZjJ4cWtqMw%3D%3D" target="_blank"> <img src="imagens/joao.png" alt="Membro 3"></a>
-                        <div class="info">
-                           JOÃO HENRIQUE<br>CEO da HVAC-R JHR Service <BR> Técnico: <br> Eletrotécnico.<br> Edificações. <br>Refrigeração Industrial& Climatização <br>Mecanico  Refrigeração Automotivo
-                            
+                    <!-- Coluna da direita -->
+                    <div class="coluna">
+                        <div class="membro">
+                            <img src="imagens/mayara.png" alt="Maiara">
+                            <div class="info">
+                                <strong>MAIARA SIMÕES ROCHA</strong><br>
+                                Técnico: Eletrotécnico, Automação Industrial.<br>
+                                Aperfeiçoamento em Inspeção e Manutenção de Equipamentos, Instituto SENAI.<br>NR 10 - Básico de Segurança em Serviços de Eletricidade  na Escola Técnica Juscelino Kubitschek
+                            </div>
                         </div>
-                    </div>
- 
-                    <div class="membro">
-                        <img src="imagens/flavio.jpg" alt="FLAVIO">
-                        <div class="info">
-                           FLAVIO ROBERTO RODRIGUES DE CASTRO <BR> Técnico: <br> Eletrotécnico.<br>Bombeiros hidráulico.<br>Soldador, Eletrodutos Revestido.<br>Info-Básico.
-                        </div>
-                    </div>
 
-                    <div class="membro">
-                        <img src="imagens/hugo1.png" alt="HUGO">
-                        <div class="info">
-                           HUGO ALMEIDA <BR> Técnico: <br> Eletrotécnico.<br>Edificações.  <br>10 Anos de Experiência na Área de Alvenaria.<BR> Técnico Planejamento<br>Modelista Grafico/Sketchup/AutoCad 2D & 3D
+                        <div class="membro">
+                            <img src="imagens/feminino.png" alt="Anielly">
+                            <div class="info">
+                                <strong>ANIELY SILVA LEAL AGOSTINHO</strong><br>
+                                Técnico: Eletrotécnico.<br>
+                                Curso Superior Incompleto.
+                            </div>
+                        </div>
+
+                        <div class="membro">
+                            <img src="imagens/joaao.png" alt="João">
+                            <div class="info">
+                                <strong>JOÃO</strong><br>
+                                Técnico: Eletrotécnico, Eletrônica.<br>
+                                10 Anos de Experiência na Área de Refrigeração.
+                            </div>
+                        </div>
+
+                        <div class="membro">
+                            <img src="imagens/hugooo.png" alt="Hugo">
+                            <div class="info">
+                                <strong>HUGO</strong><br>
+                                Técnico: Eletrotécnico.<br>
+                                5 Anos de Experiência na Área de Alvenaria e Revestimentos.
+                            </div>
+                        </div>
+
+                        <div class="membro">
+                            <img src="imagens/homem.png" alt="Reinaldo">
+                            <div class="info">
+                                <strong>REINALDO</strong><br>
+                                Técnico: Eletrotécnico.<br>
+                                Flamenguista.
+                            </div>
                         </div>
                     </div>
-                    <!-- Adicionar mais membros aqui -->
                 </div>
 
-                <!-- Coluna da direita -->
-                <div class="coluna">
-                    <div class="membro">
-                        <img src="imagens/mayara.png" alt="MAYARA">
-                        <div class="info">
-                            MAIARA SIMÕES ROCHA<br>Técnico:<br>Eletrotécnico. <br>Automação Industrial Senai.<br>Aperfeiçoamento em Instalação, Inspeção e Manutenção de Equipamentos<br> Instituto SENAI de Tecnologia Automação e
-                            Simulação <br>NR 10 - Básico de Segurança em Serviços de Eletricidade na Escola Técnica Juscelino Kubitschek
-                        </div>
-                    </div>
+            </article>
 
-                    <div class="membro">
-                        <img src="imagens/feminino.png" alt="ANIELLY">
-                        <div class="info">
-                            ANIELY SILVA LEAL AGOSTINHO<br>Técnico:<br>Eletrotécnico. <br>Curso Superior Incompleto.
-                        </div>
-                    </div>
-
-                    <div class="membro">
-                        <img src="imagens/joaao.png" alt="Joaao">
-                        <div class="info">
-                           JOÃO <br>Técnico:<br>Eletrotécnico.<br>Eletronica. <br> 10 Anos de Experiência na Área de Refrigeração. <br> Especialização Placas Eletronicas.
-                        </div>
-                    </div>
-                    <div class="membro">
-                        <img src="imagens/hugooo.png" alt="HUGO">
-                        <div class="info">
-                            HUGO<br>Técnico:<br>Eletrotécnico <br>5 Anos de Experiencia na Área de Alvenaria e Revestimentos "drywall & Gesso"
-                        </div>
-                    </div>
-
-                    <div class="membro">
-                        <img src="imagens/homem.png" alt="REINALDO">
-                        <div class="info">
-                            REINALDO<br>Técnico:<br>Eletrotécnico <br>FLAMENGUISTA <br>
-                        </div>
-                    </div>
-                    <!-- Adicionar mais membros aqui -->
-                </div>
-            </div>
-
-        </article>
-
-        <footer id="rodape">
-            <p>Copyright 2024 - |by Técnicos Por Vocação</p>
-        </footer>
-    </section>
-</div>
-
+            <footer id="rodape">
+                <p>Copyright 2024 - |by Técnicos Por Vocação</p>
+            </footer>
+        </section>
+    </div>
 </body>
 </html>

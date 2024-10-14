@@ -224,13 +224,13 @@ footer#rodape {
     color: #fff;
     padding: 20px;
     font-size: 14px;
-    width: 250px;
+    width: 350px;
     position: absolute;
     left: 190px;
     top: 0;
-    display: none;
+    display: block;
     transition: opacity 0.5s;
-    opacity: 0;
+    opacity: 1;
     border-radius: 15%;
 }
 
@@ -240,7 +240,7 @@ footer#rodape {
 }
 
 .membro:hover img {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 /* Efeito de transição para imagens adicionais */
@@ -262,4 +262,8 @@ footer#rodape {
     width: 300px;
     /* padding: 20px; */
     font-size: small;
+}
+
+#noticia-principal {
+	margin: 10px;
 }
