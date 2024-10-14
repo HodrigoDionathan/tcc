@@ -1,46 +1,30 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<style>
+  .glow-image {
+      position: relative;
+      filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6));
+      animation: glow 3s infinite ease-in-out;
+  }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #2C2C2C; /* Fundo cinza escuro */
-    color: #B0B0B0; /* Texto cinza claro */
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.center-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Ocupa 100% da altura da viewport */
-}
-
-.logo img {
-    max-width: 200px;
-    margin-bottom: 20px;
-}
+  @keyframes glow {
+      0% {
+          filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6));
+      }
+      50% {
+          filter: drop-shadow(0 0 30px rgba(255, 255, 255, 1));
+      }
+      100% {
+          filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6));
+      }
+  }
+</style>
 
 h1 {
-    font-size: 2.5rem;
-    color: #E0E0E0; /* Cinza bem claro */
+    font-size: 1rem; /* Ajuste o valor para aumentar ou diminuir o tamanho */
+    color: #181717; /* Cor do texto */
 }
 
-footer {
-    position: fixed;
-    bottom: 20px;
-    text-align: center;
-    width: 100%;
-    color: #8D8D8D; /* Cinza médio */
-}
-
-footer p {
-    font-size: 1.2rem;
-}
+    h2 {
+        font-size: 1.3rem; /* Ajuste o valor para aumentar ou diminuir o tamanho */
+    color: #181717; /* Cor do texto */
+   
+    }
