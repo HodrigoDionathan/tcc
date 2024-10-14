@@ -48,7 +48,18 @@
                 filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6));
             }
         }
+        /* passe o mouse em Em Construção  */
+        div > p {
+            display: none;
 
+
+        }
+
+        div:hover > p {
+            display: block;
+            color: #c4c4c4;
+           
+        }
         /* Canvas para partículas */
         #glowCanvas {
             position: absolute;
@@ -64,8 +75,14 @@
     <div class="container">
         <div class="logo">
             <img src="imagens/tenicosp.png" alt="Logo da Empresa" class="glow-image">
-            <h1>Em Construção </h1><br><h2>Data de Lançamento 15 de Janeiro de 2025 </h2>
+            <h1>Em Construção </h1>
+            <h2>© EngenhariaCloud 2024 </h2>
+            <p> Data de Lançamento 15 de Janeiro de 2025 </p>
+            <div>
+                <p>Data de Lançamento 15 de Janeiro de 2025 </p>
+            </div>
         <style> 
+            
             h1{
                 font-size: 1.5rem; /* Ajuste o valor para aumentar ou diminuir o tamanho */
     color: #c4c4c4; /* Cor do texto */
@@ -73,13 +90,14 @@
     margin-top: 30px;
             </style>
             <style>
-            h2 {
+            
+                h2 {
                 font-size: 1rem; /* Ajuste o valor para aumentar ou diminuir o tamanho */
     color: #d8d6d6; /* Cor do texto */
     justify-content: center;
-    
+                }
 
-    }
+
             }
         </style>
         </div>
