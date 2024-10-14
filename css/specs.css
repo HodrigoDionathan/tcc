@@ -19,3 +19,18 @@ iframe#frame-spec{
 iframe#frame-spec::-webkit-scrollbar {
 	display: none;
 } 
+#projeto-completo {
+    width: 100%; /* Ajuste conforme necessário */
+    max-width: 820px; /* Largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border: 5px solid #fff; /* Borda branca */
+    box-shadow: 0px 4px 15px rgba(69, 80, 224, 0.685); /* Sombra ao redor */
+    border-radius: 10px; /* Bordas arredondadas opcionais */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de zoom ao passar o mouse */
+#projeto-completo:hover {
+    transform: scale(1.05); /* Zoom suave */
+    box-shadow: 0px 8px 20px rgba(82, 50, 228, 0.774); /* Sombra mais intensa */
+}

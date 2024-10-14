@@ -52,7 +52,7 @@ ul#album-fotos li:hover spam {
 }
 
 ul#album-fotos li#foto01{
-	background: url('../imagens/galeria-01.jpg') no-repeat;
+	background: url('../imagens/bateria.png') no-repeat;
 	background-position: 50% 50%;
 	background-size: 400px 400px;
 	background-color: #ffffff;
@@ -66,7 +66,7 @@ ul#album-fotos li#foto01:hover{
 
 
 ul#album-fotos li#foto02{
-	background: url('../imagens/galeria-02.jpg') no-repeat;
+	background: url('../imagens/trafo12.png') no-repeat;
 	background-position: 50% 50%;
 	background-size: 400px 400px;
 	background-color: #ffffff;
@@ -80,7 +80,7 @@ ul#album-fotos li#foto02:hover{
 
 
 ul#album-fotos li#foto03{
-	background: url('../imagens/galeria-03.jpg') no-repeat;
+	background: url('../imagens/motor.png') no-repeat;
 	background-position: 50% 50%;
 	background-size: 400px 400px;
 	background-color: #ffffff;
@@ -96,7 +96,7 @@ ul#album-fotos li#foto03:hover{
 
 
 ul#album-fotos li#foto04{
-	background: url('../imagens/galeria-04.jpg') no-repeat;
+	background: url('../imagens/imas.png') no-repeat;
 	background-position: 50% 50%;
 	background-size: 400px 400px;
 	background-color: #ffffff;
@@ -111,7 +111,7 @@ ul#album-fotos li#foto04:hover{
 
 
 ul#album-fotos li#foto05{
-	background: url('../imagens/galeria-05.jpg') no-repeat;
+	background: url('../imagens/estator.png') no-repeat;
 	background-position: 50% 50%;
 	background-size: 400px 400px;
 	background-color: #ffffff;
@@ -127,12 +127,45 @@ ul#album-fotos li#foto05:hover{
 
 
 ul#album-fotos li#foto06{
-	background: url('../imagens/galeria-06.jpg') no-repeat;
+	background: url('../imagens/trafom.png') no-repeat;
 	background-position: 50% 50%;
 	background-size: 400px 400px;
 	background-color: #ffffff;
 }
 ul#album-fotos li#foto06:hover{
+	background-position: 0px 0px;
+	background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto07{
+	background: url('../imagens/transistor.png') no-repeat;
+	background-position: 50% 50%;
+	background-size: 400px 400px;
+	background-color: #ffffff;
+}
+ul#album-fotos li#foto07:hover{
+	background-position: 0px 0px;
+	background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto08{
+	background: url('../imagens/coller.png') no-repeat;
+	background-position: 50% 50%;
+	background-size: 400px 400px;
+	background-color: #ffffff;
+}
+ul#album-fotos li#foto08:hover{
+	background-position: 0px 0px;
+	background-size: 200px 200px;
+}
+
+ul#album-fotos li#foto09{
+	background: url('../imagens/capacitor.png') no-repeat;
+	background-position: 50% 50%;
+	background-size: 400px 400px;
+	background-color: #ffffff;
+}
+ul#album-fotos li#foto09:hover{
 	background-position: 0px 0px;
 	background-size: 200px 200px;
 }

@@ -22,8 +22,8 @@ div#interface {
 }
 
 p {
-    text-align: justify;
-    text-indent: 50px;
+    text-align: center;
+    text-indent: 30px;
 }
 
 a {
@@ -39,8 +39,8 @@ a:hover {
 /* Cabeçalho */
 header#cabecalho {
     position: relative;
-    height: 195px;
-    background: url("imagens/logotecnico.png") no-repeat center 50%;
+    height: 190px;
+    background: url("imagens/logotecnico.png") no-repeat center 100%;
     background-size: cover;-
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -52,7 +52,7 @@ header#cabecalho {
 
 header#cabecalho h1 {
     font-size: 36pt;
-    color: #444;
+    color: #444;s
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
@@ -109,7 +109,7 @@ figure.foto-legenda:hover figcaption {
 }
 
 #logotipo img {
-    max-height: 60px; /* Altura máxima do logotipo */
+    max-height: 70px; /* Altura máxima do logotipo */
 }
 
 nav#menu {
@@ -267,4 +267,22 @@ footer#rodape {
 
 #noticia-principal {
 	margin: 10px;
+}
+
+
+
+#projeto-completo {
+    width: 150%; /* Ajuste conforme necessário */
+    max-width: 700px; /* Largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border: 5px solid #fff; /* Borda branca */
+    box-shadow: 0px 4px 15px rgba(17, 63, 216, 0.842); /* Sombra ao redor */
+    border-radius: 10px; /* Bordas arredondadas opcionais */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de zoom ao passar o mouse */
+#projeto-completo:hover {
+    transform: scale(1.05); /* Zoom suave */
+    box-shadow: 0px 15px 40px rgba(100, 117, 212, 0.726); /* Sombra mais intensa */
 }
