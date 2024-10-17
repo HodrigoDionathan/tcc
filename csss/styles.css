@@ -205,9 +205,10 @@ nav#menu li {
 }
 
 nav#menu a {
+  margin-top:199px;
     color: #333;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 5px 15px;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
