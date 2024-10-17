@@ -196,6 +196,8 @@ footer#rodape {
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
+   flex-direction: column;
+}
 }
 
 .coluna {
