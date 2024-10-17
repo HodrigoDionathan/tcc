@@ -1,0 +1,187 @@
+body {
+  font-family: DynaPuff, sans-serif;
+  margin: auto;
+  padding: 0;
+  background: linear-gradient(to bottom, #4a90e2, #003f7f);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  max-width: 100%;
+  width: 90%;
+}
+
+.game-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.components {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.component {
+  width: 50px;
+  cursor: pointer;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 176px);
+  grid-gap: 10px;
+  
+  justify-content: center;
+}
+
+.component-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.component-name {
+  margin-bottom: 5px; /* Espaço abaixo do nome */
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+.component {
+  width: 80px; /* Aumentar o tamanho dos componentes */
+  cursor: pointer;
+}
+
+.slot {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 132px; /* Aumentar o tamanho dos slots */
+  height: 80px;
+  border: 2px dashed white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  padding: 0px;
+}
+
+
+.lamp {
+  margin-bottom: 20px;
+}
+
+.lamp img {
+  width: 50px;
+}
+
+.cerejinha {
+  margin-bottom: 20px;
+}
+
+#cerejinha {
+  width: 100px;
+  transition: transform 0.3s ease;
+}
+
+#reset {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #003f7f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#message {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .game-board {
+    grid-template-columns: repeat(3, 92px); /* Duas colunas em telas menores */
+  }
+
+  .slot, .component {
+    width: 70px;
+    height: 42px;
+  }
+
+  .lamp img {
+    width: 40px;
+  }
+
+  #cerejinha {
+    width: 80px;
+  }
+
+  #reset {
+    width: 100%;
+  }
+}
+
+/* Estilo para as cerejas caindo */
+.cherry {
+  position: absolute;
+  width: 30px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.cerejinha-container {
+  position: relative; /* Permite o posicionamento absoluto do balão */
+  display: inline-block; /* Mantém a imagem e o balão juntos */
+  margin-bottom: 20px; /* Espaçamento abaixo do contêiner */
+}
+
+.speech-bubble {
+  position: absolute; /* Posiciona o balão em relação ao contêiner */
+  bottom: 4%; /* Posiciona acima da imagem */
+  left: 256%; /* Centraliza o balão em relação à imagem */
+  transform: translateX(-80%); /* Centraliza o balão horizontalmente */
+  background-color: #75bf77; /* Cor de fundo do balão */
+  border-radius: 34px; /* Arredonda os cantos do balão */
+  padding: 10px; /* Espaçamento interno do balão */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Sombra do balão */
+  color: #fafafa; /* Cor do texto */
+  font-size: 12px; /* Tamanho da fonte */
+  z-index: 1; /* Para garantir que o balão fique acima da imagem */
+}
+
+/* Opcional: Para adicionar uma "ponta" ao balão */
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom:36%; /* Fica acima do balão */
+  left: 0%; /* Centraliza a ponta em relação ao balão */
+  transform: translateX(-54%);
+  border-width: 10px; /* Tamanho da ponta */
+  border-style: solid;
+  border-color: transparent transparent #75bf77 transparent; /* Cores da ponta */
+}
