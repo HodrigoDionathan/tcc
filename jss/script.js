@@ -8,12 +8,22 @@ const cherryRainContainer = document.getElementById('cherryRainContainer');
 
 document.querySelectorAll('.component').forEach(component => {
   component.addEventListener('click', function() {
-    if (userOrder.length < 8) {
+    const componentId = Number(this.getAttribute('data-id'));
+    const slotIndex = userOrder.indexOf(componentId);
+
+    if (slotIndex > -1) {
+      // Se o componente já estiver na ordem, removê-lo
+      userOrder.splice(slotIndex, 1); // Remove o componente da ordem
+      const slot = document.querySelector(`.slot[data-slot="${slotIndex + 1}"]`);
+      slot.innerHTML = ''; // Limpa o slot
+    } else if (userOrder.length < 8) {
+      // Se o componente não estiver na ordem, adicioná-lo
       const slot = document.querySelector(`.slot[data-slot="${userOrder.length + 1}"]`);
       slot.innerHTML = `<img src="${this.src}" class="component">`;
-      userOrder.push(Number(this.getAttribute('data-id')));
-      checkOrder();
+      userOrder.push(componentId);
     }
+    
+    checkOrder();
   });
 });
 
@@ -45,6 +55,22 @@ function resetGame() {
   message.textContent = '';
   slots.forEach(slot => (slot.innerHTML = ''));
   clearCherryRain(); // Limpa a chuva de cerejas
+  
+  // Reinserir nomes nas caixas
+  const componentNames = [
+    "Bateria",
+    "Transformador +",
+    "Capacitor",
+    "Motor Elétrico",
+    "Eixo",
+    "Estator",
+    "Transformador -",
+    "Transistor"
+  ];
+  
+  slots.forEach((slot, index) => {
+    slot.innerHTML = `<span class="component-name">${componentNames[index]}</span>`; // Reinserir nomes nas caixas
+  });
 }
 
 /* Função para iniciar a chuva de cerejas */
@@ -63,58 +89,4 @@ function startCherryRain() {
 /* Função para limpar a chuva de cerejas */
 function clearCherryRain() {
   cherryRainContainer.innerHTML = '';
-}
-
-const speechBubble = document.querySelector('.speech-bubble'); // Referência ao balão de fala
-
-function checkOrder() {
-  if (userOrder.length === 8) {
-    if (JSON.stringify(userOrder) === JSON.stringify(correctOrder)) {
-      lamp.src = 'imagenss/lampada-acesa.png';
-      cerejinha.src = 'imagenss/cerejinhafeliz.png';
-      cerejinha.style.transform = 'scale(2)';
-      message.textContent = 'Parabéns, você montou corretamente!';
-      speechBubble.textContent = 'Parabéns mandou Bem. Projeto Concluído.'; // Mensagem de sucesso
-      startCherryRain(); // Inicia a chuva de cerejas
-    } else {
-      message.textContent = 'TENTE DE NOVO MEU CHEFE!';
-      cerejinha.src = 'imagenss/cerejinhaduvida.png';
-      cerejinha.style.transform = 'scale(2)';
-      speechBubble.textContent = 'Você Errou não Desista, Tente Novamente Meu Chefe!'; // Mensagem de erro
-    }
-  }
-}
-
-function resetGame() {
-  userOrder = [];
-  lamp.src = 'imagenss/lampada-apagada.png';
-  cerejinha.src = 'imagenss/cerejinhaduvida.png';
-  cerejinha.style.transform = 'scale(1)';
-  message.textContent = '';
-  speechBubble.textContent = 'Olá, eu sou o Cerejinha, me ajude a montar o Projeto do TCC!'; // Reset da mensagem
-  slots.forEach(slot => (slot.innerHTML = ''));
-  clearCherryRain(); // Limpa a chuva de cerejas
-}
-const componentNames = [
-  "Bateria",
-  "Transformador +",
-  "Capacitor",
-  "Motor Elétrico",
-  "Eixo",
-  "Estator",
-  "Transformador -",
-  "Transistor"
-];
-
-function resetGame() {
-  userOrder = [];
-  lamp.src = 'imagenss/lampada-apagada.png';
-  cerejinha.src = 'imagenss/cerejinhaduvida.png';
-  cerejinha.style.transform = 'scale(1)';
-  message.textContent = '';
-  speechBubble.textContent = 'Olá, eu sou o Cerejinha, me ajude a montar o Projeto do TCC!'; // Reset da mensagem
-  slots.forEach((slot, index) => {
-    slot.innerHTML = `<span class="component-name">${componentNames[index]}</span>`; // Reinserir nomes nas caixas
-  });
-  clearCherryRain(); // Limpa a chuva de cerejas
 }
