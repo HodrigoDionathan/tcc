@@ -97,12 +97,12 @@ function resetGame() {
 }
 const componentNames = [
   "Bateria",
-  "Transformador",
+  "Transformador +",
   "Capacitor",
   "Motor Elétrico",
   "Eixo",
   "Estator",
-  "Transformador",
+  "Transformador -",
   "Transistor"
 ];
 
