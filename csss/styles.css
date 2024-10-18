@@ -217,3 +217,18 @@ nav#menu a:hover {
     background-color: #0066cc; /* Cor ao passar o mouse */
     color: white; /* Cor do texto ao passar o mouse */
 }
+/*caixa da pagina Jogo da principal index.html*/
+.instruction-box {
+    text-shadow: 1px 1px 2px black;
+    background-color: #75bf77;
+    border: 2px solid #333;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 40%;
+    margin: 20px auto;
+    font-family: 'DynaPuff', cursive;
+    font-size: 0.90rem;
+    color: #ffffff;
+}
