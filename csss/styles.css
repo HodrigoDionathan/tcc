@@ -32,8 +32,14 @@ body {
   gap: 10px;
   margin-bottom: 20px;
   justify-content: space-between;
+   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para o efeito */
 }
 
+.components: hover{
+    transform: scale(1.1); /* Leve zoom */
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.6); /* Brilho ao redor do componente */
+  
+}
 .component {
   width: 50px;
   cursor: pointer;
@@ -52,12 +58,11 @@ body {
   flex-direction: column;
   align-items: center;
   margin-bottom: 10px;
-   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para o efeito */
+  
 }
 
 .component-wrapper: hover {
-   transform: scale(1.1); /* Leve zoom */
-  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.6); /* Brilho ao redor do componente */
+ 
 }
   
 }
