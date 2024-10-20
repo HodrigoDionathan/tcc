@@ -217,8 +217,6 @@ font-family: DynaPuff;
 .neon-text {
   color: #fff; /* Cor do texto */
 
-
-
   text-shadow: 0 0 5px #eeff00, 0 0 10px #eeff00, 0 0 20px #eeff00, 0 0 40px #eeff00, 0 0 80px #eeff00;
   animation: blinkNeon 1.5s infinite alternate; /* Animação para piscar */
 }
