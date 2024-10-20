@@ -85,16 +85,7 @@ function checkOrder() {
   }
 }
 
-function resetGame() {
-  userOrder = [];
-  lamp.src = 'imagenss/lampada-apagada.png';
-  cerejinha.src = 'imagenss/cerejinhaduvida.png';
-  cerejinha.style.transform = 'scale(1)';
-  message.textContent = '';
-  speechbubble.textContent = 'Não Desista Meu Chefe! Tente Novamente'; // Reset da mensagem
-  slots.forEach(slot => (slot.innerHTML = ''));
-  clearCherryRain(); // Limpa a chuva de cerejas
-}
+
 const componentNames = [
   "Bateria",
   "Transformador +",
@@ -106,15 +97,4 @@ const componentNames = [
   "Transistor"
 ];
 
-function resetGame() {
-  userOrder = [];
-  lamp.src = 'imagenss/lampada-apagada.png';
-  cerejinha.src = 'imagenss/cerejinhaduvida.png';
-  cerejinha.style.transform = 'scale(1)';
-  message.textContent = '';
-  speechbubble.textContent = 'Olá, eu sou o Cerejinha, me ajude a montar o Projeto do TCC!'; // Reset da mensagem
-  slots.forEach((slot, index) => {
-    slot.innerHTML = `<span class="component-name">${componentNames[index]}</span>`; // Reinserir nomes nas caixas
-  });
-  clearCherryRain(); // Limpa a chuva de cerejas
-}
+
