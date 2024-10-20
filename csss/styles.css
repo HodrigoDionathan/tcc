@@ -128,8 +128,10 @@ font-family: DynaPuff;
 
 #message {
   font-size:larger;
-  text-shadow: 0 0 5px #0043ff82,, 0 0 10px #ff1800a6, 0 0 20px #ff0000, 0 0 40px #ff3b00, 0 0 80px #ff00ea;
+  text-shadow: 0 0 5px #0043ff82, 0 0 10px #ff1800a6, 0 0 20px #ff0000, 0 0 40px #ff3b00, 0 0 80px #ff00ea;
   animation: blinkNeon 1.5s infinite alternate; /* Animação para piscar */
+
+    
 }
   font-size: 20px;
   margin-top: 10px;
