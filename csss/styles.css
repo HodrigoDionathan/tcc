@@ -215,6 +215,21 @@ font-family: DynaPuff;
 
 .neon-text {
   color: #fff; /* Cor do texto */
+
+  .instruction-box {
+    text-shadow: 1px 1px 2px black;
+    background-color: #75bf77;
+    border: 2px solid #333;
+    padding: 0px;
+    border-radius: 35px;
+    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 92%;
+    margin: -2px auto;
+    font-family: 'DynaPuff', cursive;
+    font-size: 0.90rem;
+    color: #ffffff;
+}
   text-shadow: 0 0 5px #eeff00, 0 0 10px #eeff00, 0 0 20px #eeff00, 0 0 40px #eeff00, 0 0 80px #eeff00;
   animation: blinkNeon 1.5s infinite alternate; /* Animação para piscar */
 }
