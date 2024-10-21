@@ -28,6 +28,8 @@ body {
 
 
 .components {
+  margin-left: 10px;
+  margin-rigth: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -47,9 +49,12 @@ body {
 }
 
 .game-board {
+
+  
+  
   display: grid;
-  grid-template-columns: repeat(3, 136px);
-  grid-gap: 10px;
+  grid-template-columns: repeat(3, 131px);
+  grid-gap: 6px;
   
   justify-content: center;
 }
