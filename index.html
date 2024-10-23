@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css"href="csss\styles.css"/>
-	
+    <link rel="stylesheet" type="text/css" href="csss/styles.css"/>
     <title>Técnicos Por Vocação</title>
     <style>
-	   
         /* Ajuste básico */
         body {
-		font-family:Arial,sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #2d3764; /* Fundo cinza escuro */
@@ -52,18 +50,62 @@
                 filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6));
             }
         }
-        /* passe o mouse em Em Construção  */
+
+        /* Estilizando o texto */
+        h1 {
+            font-family: math;
+            font-size: 1.5rem;
+            color: #cfcece;
+            margin-top: 117px;
+        }
+
+        h2 {
+            font-family: math;
+            font-size: 1rem;
+            color: #d8d6d6;
+            justify-content: center;
+        }
+
+        /* Ícones na horizontal dentro de um container arredondado */
+        .icon-container {
+            display: flex;
+            justify-content: space-around;
+            background-color: #000;
+            padding: 15px 20px;
+            border-radius: 30px; /* Bordas arredondadas maiores */
+            width: max-content;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Sombra ao redor do container */
+        }
+
+        .icons a {
+            display: inline-block;
+            padding: 15px;
+            border-radius: 50%;
+            background-color: #333; /* Fundo escuro dos ícones */
+            transition: transform 0.3s ease, background-color 0.3s ease; /* Suavidade na transição */
+        }
+
+        .icons img {
+            width: 43px;
+            filter: invert(100%); /* Inverte as cores da imagem para branco */
+        }
+
+        /* Efeito de zoom ao passar o mouse */
+        .icons a:hover {
+            transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+            background-color: #555; /* Muda o fundo ao passar o mouse */
+        }
+
+        /* Passe o mouse em Em Construção */
         div > p {
             display: none;
-
-
         }
 
         div:hover > p {
             display: block;
             color: #c4c4c4;
-           
         }
+
         /* Canvas para partículas */
         #glowCanvas {
             position: absolute;
@@ -76,60 +118,29 @@
     </style>
 </head>
 <body>
-   
-
-    
     <div class="container">
         <div class="logo">
             <img src="imagens/tecnicologom.png" alt="Logo da Empresa" class="glow-image">
-            <h1>Em Construção </h1>
-            <h2>© por Hódrigo Dionathan 2024 </h2>
-            <p> Data de Lançamento 15 de Janeiro de 2025 </p>
+            <h1>Em Construção</h1>
+            <h2>© por Hódrigo Dionathan 2024</h2>
+            <p>Data de Lançamento 15 de Janeiro de 2025</p>
+
             <div>
-                <p>Data de Lançamento 15 de Janeiro de 2025 </p>
+                <p>Data de Lançamento 15 de Janeiro de 2025</p>
             </div>
-        <style> 
 
-		
-            h1{
-                font-size: 1.5rem; /* Ajuste o valor para aumentar ou diminuir o tamanho */
-    color: #cfcece; /* Cor do texto */
-    
-    margin-top: 30px;
-            </style>
-            <style>
-            
-                h2 {
-                font-size: 1rem; /* Ajuste o valor para aumentar ou diminuir o tamanho */
-    color: #d8d6d6; /* Cor do texto */
-    justify-content: center;
-                }
-
-
-            }
-        </style>
-		<style> @import url('https://fonts.googleapis.com/css2?family=Chango&family=DynaPuff:wght@400..700&family=Sniglet:wght@400;800&display=swap');</style>
-		<div class="instruction-box">
-			 <a href="jogo.html.html" target="_blank">CLIQUE AQUI PARA JOGAR</a>
-			 <img src="imagenss/jogoo.png" style="
-    width: 22px;
-">
-			
-    </div>
-    
+            <!-- Ícones abaixo de "por Hódrigo Dionathan" -->
+            <div class="icons">
+                <a href="jogo.html.html" title="Jogo">
+                    <img src="imagens/gamee.png" alt="Ícone Jogo">
+                </a>
+                <a href="Equipefaixa.html" title="Equipe">
+                    <img src="imagens/equipe.png" alt="Ícone 2">
+                </a>
+                
+            </div>
         </div>
     </div>
-
-    <footer></footer>
-
-    <!-- Adicionando o canvas para efeitos especiais -->
-    
-
-   
-</head>
-<body>
-
-    
 
     <script>
         // Exemplo simples de evento de clique no botão
