@@ -268,7 +268,12 @@ footer#rodape {
 }
 
 #noticia-principal {
-	margin: 10px;
+
+
+	    background-color: #465cbd;
+    border-radius: 10px;
+    margin: 10px;
+    height: 1090px;
 }
 
 
