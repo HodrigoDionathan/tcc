@@ -8,99 +8,82 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Chango&family=DynaPuff:wght@400..700&family=Sniglet:wght@400;800&display=swap');
   </style>
-
-  
- 
-
-  
 </head>
 <body>
-  <div id="cherryRainContainer"></div> <!-- Container para a chuva de cerejas -->
+  <div id="cherryRainContainer"></div>
 
   <div class="container">
     <h1 style="font-size: 20px; color:#fff; text-align:center; border:4px; font-family: DynaPuff;text-shadow: 0 0 5px #f0f, 0 0 10px  #f0f, 0 0 20px  #f0f, 0 0 40px  #f0f, 0 0 80px  #f0f, 0 0 100px  #f0f">Ajude o Cerejinha a Montar o Projeto do TCC</h1>
-    <div class="instruction-box"> <p style="text-shadow:1px 2px 3px black">Monte o projeto e faça a <span class="neon-text">Lâmpada Acender</span>.</p>
-    <p style="text-shadow:1px 2px 3px black">Clique nos componentes abaixo para organizá-los</p></div>
+    <div class="instruction-box">
+      <p style="text-shadow:1px 2px 3px black">Monte o projeto e faça a <span class="neon-text">Lâmpada Acender</span>.</p>
+      <p style="text-shadow:1px 2px 3px black">Clique nos componentes abaixo para organizá-los</p>
+    </div>
     <div class="lamp">
       <img src="imagenss/lampada-apagada.png" alt="Lâmpada" id="lampada">
-    </div></div>
-    <div class="game-area">
-      <div class="components">
-        <!-- Componentes do jogo -->
-        <div class="component-wrapper">
-          <span class="component-name">Transformador +</span>
-          <img src="imagenss/trafo.png" alt="Transformador" class="component" data-id="2">
-        </div>
-        <div class="component-wrapper">
-          <span class="component-name">Capacitor</span>
-          <img src="imagenss/capacitor.png" alt="Capacitor" class="component" data-id="3">
-        </div>
-        <div class="component-wrapper">
-          <span class="component-name">Motor Elétrico</span>
-          <img src="imagenss/motorele.png" alt="Motor Elétrico" class="component" data-id="4">
-        </div>
-        <div class="component-wrapper">
-          <span class="component-name">Bateria</span>
-          <img src="imagenss/bateria.png" alt="Bateria" class="component" data-id="1">
-        </div>
-        <div class="component-wrapper">
-          <span class="component-name">Transistor</span>
-          <img src="imagenss/transisto.png" alt="Transistor" class="component" data-id="8">
-        </div>
-        <div class="component-wrapper">
-          <span class="component-name">Eixo</span>
-          <img src="imagenss/eixo.png" alt="Eixo" class="component" data-id="5">
-        </div>
-        <div class="component-wrapper">
-          <span class="component-name">Estator</span>
-          <img src="imagenss/estator.png" alt="Estator" class="component" data-id="6">
-        </div>
-        <div class="component-wrapper">
-          <span class="component-name">Transformador -</span>
-          <img src="imagenss/trafo.png" alt="Transformador" class="component" data-id="7">
-        </div>
-      </div>
-      <button id="reset"><img src="imagenss/reniciarlogo.png" alt="Imagem" class="button-icon"> Reinicia</button>
-      <p id="message"></p>
-      <div class="game-board">
-       
-        <!-- Área de montagem -->
-        <div class="slot" data-slot="1">Bateria</div>
-        <div class="slot" data-slot="2">Transformador +</div>
-        <div class="slot" data-slot="3">Capacitor</div>
-        <div class="slot" data-slot="4">Motor Elétrico</div>
-        <div class="slot" data-slot="5">Eixo</div>
-        <div class="slot" data-slot="6">Estator</div>
-        <div class="slot" data-slot="7">Transformador -</div>
-        <div class="slot" data-slot="8">Transistor</div>
-      </div>
-    
-      
     </div>
-
-    <div class="speech-bubble"></div>
-
-    
-    <div class="game-container">
-      <!-- Outros elementos do jogo -->
-      
-     
-
-    <div class="cerejinha-container">
-
-     
-
-
-      <img src="imagenss/cerejinhaduvida.png" alt="Cerejinha" id="cerejinha">
-      <div class="speech-bubble">
-        Olá, eu sou o Cerejinha, me ajude a montar o Projeto do TCC!
-      </div>
-    </div>
-
-    
   </div>
-  
-  
+
+  <div class="game-area">
+    <div class="components">
+      <div class="component-wrapper">
+        <span class="component-name">Transformador +</span>
+        <img src="imagenss/trafo.png" alt="Transformador" class="component" data-id="2">
+      </div>
+      <div class="component-wrapper">
+        <span class="component-name">Capacitor</span>
+        <img src="imagenss/capacitor.png" alt="Capacitor" class="component" data-id="3">
+      </div>
+      <div class="component-wrapper">
+        <span class="component-name">Motor Elétrico</span>
+        <img src="imagenss/motorele.png" alt="Motor Elétrico" class="component" data-id="4">
+      </div>
+      <div class="component-wrapper">
+        <span class="component-name">Bateria</span>
+        <img src="imagenss/bateria.png" alt="Bateria" class="component" data-id="1">
+      </div>
+      <div class="component-wrapper">
+        <span class="component-name">Transistor</span>
+        <img src="imagenss/transisto.png" alt="Transistor" class="component" data-id="8">
+      </div>
+      <div class="component-wrapper">
+        <span class="component-name">Eixo</span>
+        <img src="imagenss/eixo.png" alt="Eixo" class="component" data-id="5">
+      </div>
+      <div class="component-wrapper">
+        <span class="component-name">Estator</span>
+        <img src="imagenss/estator.png" alt="Estator" class="component" data-id="6">
+      </div>
+      <div class="component-wrapper">
+        <span class="component-name">Transformador -</span>
+        <img src="imagenss/trafo.png" alt="Transformador" class="component" data-id="7">
+      </div>
+    </div>
+    <button id="reset"><img src="imagenss/reniciarlogo.png" alt="Imagem" class="button-icon"> Reinicia</button>
+    <p id="message"></p>
+    <div class="game-board">
+      <div class="slot" data-slot="1">Bateria</div>
+      <div class="slot" data-slot="2">Transformador +</div>
+      <div class="slot" data-slot="3">Capacitor</div>
+      <div class="slot" data-slot="4">Motor Elétrico</div>
+      <div class="slot" data-slot="5">Eixo</div>
+      <div class="slot" data-slot="6">Estator</div>
+      <div class="slot" data-slot="7">Transformador -</div>
+      <div class="slot" data-slot="8">Transistor</div>
+    </div>
+  </div>
+
+  <div class="speech-bubble"></div>
+
+  <div class="game-container">
+    <div class="cerejinha-container">
+      <img src="imagenss/cerejinhaduvida.png" alt="Cerejinha" id="cerejinha">
+      <div class="speech-bubble">Olá, eu sou o Cerejinha, me ajude a montar o Projeto do TCC!</div>
+    </div>
+  </div>
+
+  <audio id="clickSound" src="sons/sfxboing.mp3"></audio>
+  <audio id="successSound" src="sons/sfxvictory.mp3"></audio>
+  <audio id="errorSound" src="sons/sfxdefeat.mp3"></audio>
 
   <script src="jss/script.js"></script>
 </body>
