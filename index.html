@@ -6,24 +6,7 @@
     <link rel="stylesheet" type="text/css" href="csss/styles.css"/>
     <title>Técnicos Por Vocação</title>
     <style>
-         /* Estilos para morcegos animados */
- /* Estilos para morcegos animados */
- .morcego {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: baterAsas 0.6s ease-in-out infinite alternate;
-    opacity: 0.8;
-}
-
-/* Animação de batimento de asas */
-@keyframes baterAsas {
-    0% { transform: scaleY(1) translate(-50%, -50%); }
-    100% { transform: scaleY(0.9) translate(-50%, -50%); }
-}
+  
 
         /* Ajuste básico */
         body {
@@ -176,56 +159,6 @@
             alert('Você clicou no botão!');
         });
     </script>
-<script>
-        function criarMorcegos() {
-            for (let i = 0; i < 6; i++) {
-                const morcego = document.createElement('img');
-                morcego.src = 'imagens/morceco.gif';
-                morcego.classList.add('morcego');
 
-                // Define ângulo, distância e velocidade aleatórios para cada morcego
-                const angulo = Math.random() * 2 * Math.PI;
-                const distancia = 300 + Math.random() * 350;
-                const velocidade = 6 + Math.random() * 1.5;
-                const curvaX = 100 + Math.random() * 200;
-                const curvaY = 100 + Math.random() * 200;
-                const tamanho = 0.5 + Math.random();
-
-                // Adiciona a animação personalizada para cada morcego
-                morcego.style.animation = `voo-${i} 8s ease-out forwards`;
-
-                // Ajusta o tamanho do morcego
-                morcego.style.width = `${50 * tamanho}px`;
-                morcego.style.height = `${50 * tamanho}px`;
-
-               
-
-                // Define a animação personalizada para cada morcego
-                const estiloAnimacao = document.createElement('style');
-                estiloAnimacao.innerHTML = `
-                    @keyframes voo-${i} {
-                        0% {
-                            opacity: 1;
-                            transform: translate(-50%, -50%) scale(${tamanho});
-                        }
-                        50% {
-                            transform: translate(calc(${curvaX * Math.cos(angulo)}px), calc(${curvaY * Math.sin(angulo)}px)) scale(${tamanho});
-                        }
-                        100% {
-                            opacity: 0;
-                            transform: translate(${distancia * Math.cos(angulo)}px, ${distancia * Math.sin(angulo)}px) scale(${tamanho});
-                        }
-                    }
-                `;
-                document.head.appendChild(estiloAnimacao);
-
-                // Adiciona o morcego à página
-                document.body.appendChild(morcego);
-            }
-        }
-
-        // Executa a função ao carregar a página
-        window.addEventListener("load", criarMorcegos);
-    </script>
 </body>
 </html>
