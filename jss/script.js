@@ -81,7 +81,7 @@ function checkOrder() {
       speechBubble.textContent = 'Parabéns! Mandou bem, projeto concluído!';
 
       // Reiniciar o jogo após 2 segundos
-      setTimeout(resetGame, 2000); // Tempo antes de reiniciar (2 segundos)
+      setTimeout(resetGame, 7000); // Tempo antes de reiniciar (2 segundos)
     } else {
       errorSound.play(); // Toca som de erro
       message.textContent = 'TENTE DE NOVO MEU CHEFE!';
