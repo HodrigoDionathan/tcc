@@ -74,8 +74,8 @@ function checkOrder() {
   if (userOrder.length === 8) {
     if (JSON.stringify(userOrder) === JSON.stringify(correctOrder)) {
       successSound.play(); // Toca som de sucesso
-      lamp.src = 'imagens/lampada-acesa.png';
-      cerejinha.src = 'imagens/cerejinhafeliz.png';
+      lamp.src = 'imagenss/lampada-acesa.png';
+      cerejinha.src = 'imagenss/cerejinhafeliz.png';
       cerejinha.style.transform = 'scale(3)';
       message.textContent = 'Parabéns, você montou corretamente!';
       speechBubble.textContent = 'Parabéns! Mandou bem, projeto concluído!';
@@ -85,7 +85,7 @@ function checkOrder() {
     } else {
       errorSound.play(); // Toca som de erro
       message.textContent = 'TENTE DE NOVO MEU CHEFE!';
-      cerejinha.src = 'imagens/cerejinhaduvida.png';
+      cerejinha.src = 'imagenss/cerejinhaduvida.png';
       cerejinha.style.transform = 'scale(2)';
       speechBubble.textContent = 'Não desista, meu chefe! Tente novamente!';
     }
@@ -95,8 +95,8 @@ function checkOrder() {
 // Função para reiniciar o jogo
 function resetGame() {
   userOrder = [];
-  lamp.src = 'imagens/lampada-apagada.png';
-  cerejinha.src = 'imagens/cerejinhaduvida.png';
+  lamp.src = 'imagenss/lampada-apagada.png';
+  cerejinha.src = 'imagenss/cerejinhaduvida.png';
   cerejinha.style.transform = 'scale(1)';
   message.textContent = '';
   slots.forEach((slot, index) => {
