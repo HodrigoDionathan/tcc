@@ -28,14 +28,13 @@ body {
   
   
   .components {
-    margin-left: 10px;
+        margin-left: 28px;
     margin-rigth: 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: -8px;
-    justify-content: space-between;
+    gap: 3px;
+    margin-bottom: -3px;
+    justify-content: space-evenly;
    
    
     
