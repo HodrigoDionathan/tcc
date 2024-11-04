@@ -222,6 +222,7 @@ footer#rodape {
 
 /* Estilo do texto de informação */
 .membro .info {
+	text-align: left;
     color: #fff;
     font-size: 14px;
     line-height: 1.5;
