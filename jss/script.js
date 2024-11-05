@@ -14,8 +14,8 @@ const errorSound = document.getElementById('errorSound');
 const componentNames = [
   "Bateria",
   "Transistor",
-  "Capacitor",
   "Transformador +",
+  "Capacitor",
   "Motor Elétrico",
   "Eixo",
   "Estator",
@@ -24,14 +24,14 @@ const componentNames = [
 
 // Dicas de montagem
 const tips = [
-  "Selecione a bateria de 70Ah 12 volts.",
-  "Agora é a vez do Transistor.",
-  "Escolha o Capacitor.",
-  "E isso aí, falta escolher o Transformador.",
-  "Quase lá. Selecione o motor elétrico.",
-  "Agora é a vez do EIXO adaptado com ímãs.",
-  "Selecione o Estator.",
-  "E por fim, selecione o medidor de Voltagem.",
+  "Ótimo começo! Clique na Bateria.",
+  "Excelente! Agora selecione o Transistor.",
+  "Você está indo muito bem! Escolha o Transformador.",
+  "Vamos lá! Hora do Capacitor.",
+  "Quase lá! Clique no Motor Elétrico.",
+  "Muito bem! Agora, escolha o Eixo",
+  "Quase terminando! Selecione o Estator.",
+  "Último passo! Clique no Medidor de Voltagem.",
 ];
 
 let currentTipIndex = 0; // Índice atual da dica
