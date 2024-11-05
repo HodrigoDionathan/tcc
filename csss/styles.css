@@ -193,13 +193,13 @@ body {
   .speech-bubble {
     text-shadow: 1px 2px 2px black;
     position: absolute;
-    bottom: 47%;
+    bottom: 23%;
     left: 238%;
     transform: translateX(-80%);
     background-color: #2f2b35;
-    border-radius: 34px;
-    padding: 33px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 36px;
+    padding: 28px;
+    box-shadow: 0 0 33px rgba(0, 0, 0, 0.4);
     color: #fafafa;
     font-size: 14px;
     z-index: 1;
