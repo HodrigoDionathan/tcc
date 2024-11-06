@@ -280,3 +280,31 @@ footer#rodape {
     transform: scale(1.05); /* Zoom suave */
     box-shadow: 0px 15px 40px rgba(100, 117, 212, 0.726); /* Sombra mais intensa */
 }
+
+/* Estilo dos ícones de redes sociais dentro dos links */
+.membro a img {
+    width: 54px;
+    height: 43px;
+    margin-left: 5px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de zoom nos ícones ao passar o mouse */
+.membro a img:hover {
+    transform: scale(1.2); /* Zoom suave */
+}
+
+/* Estilo dos ícones de redes sociais */
+.social-icon {
+    width: 16px; /* Novo tamanho da miniatura */
+    height: 16px; /* Novo tamanho da miniatura */
+    margin-left: 5px; /* Menor espaço entre o nome e o ícone */
+    vertical-align: middle; /* Alinha verticalmente com o texto */
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de zoom nos ícones ao passar o mouse */
+.social-icon:hover {
+    transform: scale(1.2); /* Zoom suave */
+}
