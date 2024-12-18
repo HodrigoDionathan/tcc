@@ -9,7 +9,26 @@
 		@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
 		@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:slnt,wght@8,100&display=swap');
 
-		
+		  /* Estilos gerais para a imagem com link */
+		  .imagem-lado-direito {
+            position: fixed;   /* Fixa a imagem no lado direito */
+            right: 0;          /* Alinhamento à direita */
+            bottom: auto;      /* A posição a partir da parte inferior da tela */
+            width: 80px;      /* Largura da imagem para desktops */
+            transition: width 0.3s ease; /* Transição suave para redimensionamento */
+			
+			border-radius: 26%;
+        }
+
+        /* Ajustes para dispositivos móveis */
+        @media (max-width: 768px) {
+            .imagem-lado-direito {
+                width: 80px; /* Reduz o tamanho da imagem em telas menores */
+                bottom: 10px; /* Ajusta a posição para mais próxima da borda inferior */
+            }
+        }
+			
+        
 	</style>
 	
 
@@ -34,16 +53,21 @@
 		
 		
 		<ul>
-		<li onmouseover="mudaFoto('imagens/home.png')" onmouseout="mudaFoto('imagens/eletrico.png')"> <a href="index.html">        Home          </a></li>
+		<li onmouseover="mudaFoto('imagens/home.png')" onmouseout="mudaFoto('imagens/eletrico.png')"> <a href="pindex.html">        Home          </a></li>
 		
 		<li onmouseover="mudaFoto('imagens/especificacoes.png')" onmouseout="mudaFoto('imagens/eletrico.png')"> <a href="specs.html">        Especificações</a></li>
 		<li onmouseover="mudaFoto('imagens/fotos.png')" onmouseout="mudaFoto('imagens/eletrico.png')"> <a href="fotos.html">        Fotos         </a></li>
 		<li onmouseover="mudaFoto('imagens/multimidia.png')" onmouseout="mudaFoto('imagens/eletrico.png')"> <a href="multimidia.html">   Multimídia    </a></li>
-		<li onmouseover="mudaFoto('imagens/equipe1.png')" onmouseout="mudaFoto('imagens/eletrico.png')"> <a href="Equipe.html"> Equipe  </a></li>
+		<li onmouseover="mudaFoto('imagens/equipe1.png')" onmouseout="mudaFoto('imagens/eletrico.png')"> <a href="equipefaixa.html"> Equipe  </a></li>
 		</ul>
 		</nav><img style="" src="imagens/logotecnico.png" alt="Logotipo">
+		<div><nav id="imagem-lado-direito">
+			<ul> <li>
+				<a href="pindex.html">
+					<img src="imagens/gamer.gif" alt="Imagem Fixa" class="imagem-lado-direito">
+					Home</ul></nav></div>
 	</div>
-				
+	
 	
 		
 <header id="cabecalho">
@@ -52,7 +76,7 @@
 
 
 <h1> Técnicos Por Vocação                       </h1>
-<h2> Análise de Viabilidade de Motores Elétricos </h2></hgroup>
+<h2> Sistema Didático de Conversão e Geração de Energia </h2></hgroup>
 
 <img id="icone" src="imagens/eletrico.png"/>
 
@@ -68,13 +92,13 @@
 
 
 <section id="corpo">
-	<article id="noticia-principal">
+	<article id="noticia-principalll">
 		<header id="cabecalho-artigo">
 <hgroup>
 
 <h1 style="element.style {
 margin-top: 30px;}; 
-margin-top: 30px;" >    Explorando a Eficiência e Sustentabilidade dos Motores Elétricos em Sistemas Fechados </h1>
+margin-top: 30px;" >     </h1>
 
 
 </hgroup>
@@ -82,70 +106,63 @@ margin-top: 30px;" >    Explorando a Eficiência e Sustentabilidade dos Motores 
 
 
 
-<h2 >O que é</h2>
-<p><span>
- Este projeto de TCC é uma análise detalhada da viabilidade dos motores elétricos em sistemas  autossustentáveis, também conhecidos como motores perpétuos. A pesquisa visa investigar o potencial dos motores elétricos de operar indefinidamente com base na energia gerada por eles mesmos, explorando seus limites técnicos e as barreiras que impedem seu funcionamento contínuo sem fontes externas de energia.</span></p>
-<figure class="foto-legenda">
-<img src="imagens/prototipologo.png"/>
+<h2 style="    text-align:center;" >Sistema Didático de Conversão e Geração de Energia</h2>
+<p style="  color:white;"><span>
+	</span>A compreensão dos processos de conversão e geração de energia elétrica é fundamental para estudantes e profissionais da área de eletrotécnica, especialmente devido à sua ampla aplicação em ambientes residenciais, comerciais e industriais. Este trabalho de conclusão de curso (TCC) visa desenvolver um sistema didático que ilustre, de forma prática, esses processos, permitindo que os alunos visualizem e compreendam o funcionamento básico de um sistema de geração e conversão de energia.
+	A energia elétrica é um recurso essencial para a sociedade moderna, mas o entendimento sobre os seus processos de transformação e geração é muitas vezes limitado a teorias complexas. Esse cenário reforça a importância de sistemas didáticos que simplifiquem esses conceitos, tornando-os mais acessíveis e compreensíveis para o público-alvo. A escolha deste tema para o TCC se baseia na relevância da energia elétrica e na necessidade de aprimorar o ensino desses processos fundamentais. Com um sistema didático acessível, é possível demonstrar de maneira prática como a energia elétrica pode ser transformada e utilizada em diferentes formas e aplicações.
+	Este protótipo foi desenvolvido no curso técnico em Eletrotécnica da Escola Técnica Sandra Silva, com o objetivo de ilustrar, de forma prática, os processos de conversão e geração de energia. Utilizando componentes como uma bateria estacionária, um transistor, um transformador, um motor elétrico e ímãs de neodímio, o protótipo mostra o fluxo de energia desde uma fonte de corrente contínua até a produção de corrente alternada, simulando a energia fornecida em ambientes residenciais e comerciais. O sistema ainda possui uma saída de onda quadrada, ilustrando uma aplicação prática para o acionamento de cargas mais pesadas.
+	O processo de geração de energia elétrica, quando aplicado em um sistema didático como este, oferece uma compreensão visual e prática das etapas envolvidas. Desde a modulação da corrente até a geração de movimento mecânico e, posteriormente, de corrente alternada, o sistema demonstra a importância dos elementos presentes em sistemas de geração e distribuição de energia. A utilização de formas de onda diferentes (senoidal e quadrada) permite explorar as aplicações de cada tipo de onda no acionamento de diferentes cargas
+	</p>
+
+
+	
+	
+
+	<p style="color: white; font-size:12px;"> Organograma do prototipo</p>
+	<figure class="foto-legenda">
+		
+<img src="imagens/fluxogramaopp.png"/>
+
 
 <figcaption>
 	<h3>Prototipo</h3>
-	<p> Uma Analise de Viabilidade</p>
+	<p> Uma Analise de Didatica</p>
 </figure>
 
 </figcaption>
-<h2>Como foi montado?</h2>
-<p>O protótipo foi montado utilizando os seguintes componentes principais:
+<h2 style="text-align: center;">Como foi montado?</h2>
+<p style="color:white;">O protótipo desenvolvido consiste em um sistema de geração de energia elétrica que utiliza uma bateria estacionária, transistores, um transformador e um motor elétrico. Este equipamento foi projetado com um foco didático, visando demonstrar os processos de conversão e geração de energia de forma prática e acessível.
+	A operação do protótipo inicia-se com a bateria estacionária, que fornece energia elétrica em corrente contínua. Essa corrente é regulada pelo transistor, que atua como um interruptor eletrônico, controlando a quantidade de carga que é enviada para o transformador. O transformador, por sua vez, converte a corrente contínua em corrente alternada com auxilio do transistores, alimentando um motor elétrico.
+	Quando o motor é acionado, ele transforma a energia elétrica em movimento mecânico, gerando um eixo com ímãs de neodímio que gira no centro de um estator. Esse movimento resulta na geração de energia alternada, que é então distribuída por duas tomadas, simulando uma onda senoidal, a mesma que encontramos em residências e estabelecimentos comerciais. Além disso, o sistema conta com uma tomada adicional que também provém do transformador, a qual simula ondas quadradas, capazes de alimentar cargas mais potentes.
+	Este projeto não apenas ilustra os conceitos de geração e conversão de energia, mas também proporciona uma compreensão prática das diferentes formas de onda e suas aplicações em circuitos elétricos. O protótipo foi desenvolvido em conformidade com todas as normas de segurança elétrica, garantindo a segurança dos usuários durante seu funcionamento.
+	Ao final deste projeto, o protótipo servirá como uma ferramenta educativa, permitindo que estudantes e profissionais da área de eletrotécnica visualizem e compreendam melhor os processos envolvidos na conversão e geração de energia elétrica, bem como as aplicações práticas dessas tecnologias no cotidiano.
+	</p>
 
-4 baterias de 12V e 5Ah, ligadas em série para fornecer energia ao sistema.
-Um transformador que eleva a tensão de 12VAC para 127VAC, necessário para alimentar o motor.
-Um motor elétrico que, ao girar, movimenta um eixo.
-O eixo é conectado a um sistema de recuperação de energia, onde a energia gerada durante a operação do motor é direcionada para recarregar as baterias e alimentar uma carga externa.
-O foco principal é analisar como o motor interage com o sistema de carga e descarga de energia e identificar as perdas inevitáveis durante o processo.</p>
-
-<h2>Especificações Técnicas</h2>
+<h2 style="text-align: center;"> <a href="specs.html">Especificações Técnicas</a></h2>
 <table id="tabelaspec">
-<caption>Tabela Técnica do Projeto <span> Dez</span>/2024</span></caption> 
+<caption style="text-align: left;">Tabela Técnica do Projeto </caption> 
 
 
 
-<tr><td class="ce">Baterias</td><td class="cd">4 baterias de 12V e 5Ah  </td></tr>
-<tr><td class="ce">Transformador</td><td class="cd"> conversor de tensão de 12VA para 127VA </td></tr>
-<tr><td class="ce">Motor Elétrico</td><td class="cd">  Motor ventilador com potência de 127VAC. </td></tr>
-<tr><td class="ce">Carregador</td><td class="cd">  Circuito que recolhe parte da energia gerada e a utiliza para recarregar as baterias. </td></tr>
-<tr><td class="ce">Sistema de Controle</td><td class="cd">  Controla o fluxo de energia entre os component </td></tr>
+<tr><td class="ce">Baterias</td><td class="cd" >1 Baterias de 12V e 70Ah </td></tr>
+<tr ><td class="ce">Transformador</td><td class="cd">   12V DC para 127V AC </td></tr>
+<tr><td class="ce">Motor Elétrico</td><td class="cd">  Motor Elétrico 127VA 180W. </td></tr>
+<tr><td class="ce">Eixo com Imãs</td><td class="cd">  Os ímãs de neodímio 4x2x1  </td></tr>
+<tr><td class="ce">Estator</td><td class="cd">  O estator 140w. </td></tr>
 
 </table>
+<P><a href="specs.html" >Continuar Lendo</a></P>
 
 
-<h2>Como funciona</h2>
-<p>O sistema parte do princípio de que o motor elétrico, ao receber energia das baterias, pode mover um eixo, e parte dessa energia mecânica poderia ser convertida de volta em energia elétrica. O transformador aumenta a tensão para alimentar o motor, que aciona o eixo. O sistema de carregamento utiliza escovas condutoras para captar parte da energia gerada e direcioná-la de volta para as baterias, com o objetivo de prolongar o tempo de operação do motor.
 
-Contudo, o projeto também analisa as inevitáveis perdas de energia que ocorrem devido à resistência elétrica, atrito e dissipação de calor, destacando que, na prática, o motor não consegue operar indefinidamente.
 
-</p>
 
-<h2>O que você pode fazer com um motor de energia perpétua?</h2>
-<p>Embora a ideia de um motor de energia perpétua seja atraente, ela viola as leis da termodinâmica. Este projeto demonstra que, na prática, os motores elétricos não podem operar indefinidamente sem uma fonte externa de energia. O estudo mostra os limites reais desses sistemas e o que pode ser feito para maximizar sua eficiência, como melhorando os materiais e reduzindo perdas de energia. Além disso, o estudo serve como uma base para entender melhor como motores eficientes podem ser aplicados em sistemas que demandam alta sustentabilidade energética.</p>
+
 </article>
 </section>
-<aside id="lateral">
 
-
-<h1>Outras Notícias</h1>
-<h2>Vídeo mais recente</h2>
-
-[AQUI ENTRA UM VÍDEO]
-
-<h2>Novidades sobre esses estudos</h2>
-<p>Estudos recentes sobre motores elétricos focam em aumentar sua eficiência, utilizando materiais mais leves e condutores de menor resistência. Pesquisas também investigam o uso de novas fontes de energia, como células de combustível e baterias de estado sólido, para prolongar a autonomia dos motores. Avanços em controles eletrônicos e em tecnologias de recuperação de energia também estão trazendo melhorias na eficiência de sistemas motorizados.
-
-Apesar dessas inovações, os princípios básicos da termodinâmica continuam impondo limites ao funcionamento de motores em sistemas fechados, como os analisados neste projeto.</p>
-
-
-</aside>
 <footer id="rodape">
-<p>Copyright 2024 - por Hódrigo Dionathan </p>
+<p style="text-align: center;">Copyright 2024 - by Hódrigo Dionathan </p>
 </footer>
 </div>
 </body>
