@@ -5,11 +5,34 @@
 	<title>Tudo sobre  o Projeto</title>
 	<link rel="stylesheet" type="text/css"href="css\estilo.css"/>
 	<link rel="stylesheet" type="text/css" href="css\media.css"/>
+    <style>
+        /* Estilos do molde */
+        .tv-molde {
+            position: relative;
+            width: 600px; /* Defina o tamanho do molde */
+            height: 400px; /* Ajuste conforme necessário */
+            background-image: url('teste.png'); /* Coloque o nome da imagem do molde */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Estilos do vídeo para centralizá-lo */
+        .video-iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%; /* Ajuste o tamanho do vídeo conforme necessário */
+            height: 80%;
+            border: none;
+        }
+    </style>
 </head>
 <script languagen="javascript" src="javascript/funcoes.js" >
 	
 </script>
 <body>
+    
 
 
 	<div    id="interface">
@@ -20,18 +43,15 @@
         justify-content: center;
         flex-direction: row;
     ">
-            <nav id="menu">
-            
-            
+              <nav id="menu">
             <ul>
-            <li onmouseover="mudaFoto('imagens/home.png')" onmouseout="mudaFoto('imagens/multimidia.png')"> <a href="index.html">        Home          </a></li>
-            
-            <li onmouseover="mudaFoto('imagens/especificacoes.png')" onmouseout="mudaFoto('imagens/multimidia.png')"> <a href="specs.html">        Especificações</a></li>
-            <li onmouseover="mudaFoto('imagens/fotos.png')" onmouseout="mudaFoto('imagens/multimidia.png')"> <a href="fotos.html">        Fotos         </a></li>
-            <li onmouseover="mudaFoto('imagens/multimidia.png')" onmouseout="mudaFoto('imagens/multimidia.png')"> <a href="multimidia.html">   Multimídia    </a></li>
-            <li onmouseover="mudaFoto('imagens/equipe1.png')" onmouseout="mudaFoto('imagens/multimidia.png')"> <a href="Equipe.html"> Equipe  </a></li>
+                <li onmouseover="mudaFoto('imagens/home.png')" onmouseout="mudaFoto('imagens/especificacoes.png')"> <a href="index.html">Home</a></li>
+                <li onmouseover="mudaFoto('imagens/especificacoes.png')" onmouseout="mudaFoto('imagens/especificacoes.png')"> <a href="specs.html">Especificações</a></li>
+                <li onmouseover="mudaFoto('imagens/fotos.png')" onmouseout="mudaFoto('imagens/especificacoes.png')"> <a href="fotos.html">Fotos</a></li>
+                <li onmouseover="mudaFoto('imagens/multimidia.png')" onmouseout="mudaFoto('imagens/especificacoes.png')"> <a href="multimidia.html">Multimídia</a></li>
+                <li onmouseover="mudaFoto('imagens/equipe1.png')" onmouseout="mudaFoto('imagens/especificacoes.png')"> <a href="Equipefaixa.html">Equipe</a></li>
             </ul>
-            </nav><img style="" src="imagens/logotecnico.png" alt="Logotipo">
+        </nav><img style="" src="imagens/logotecnico.png" alt="Logotipo">
         </div>
                     
         
@@ -52,7 +72,139 @@
     
     </header>
 
+    <!-- Link para o CSS do Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- Link para o seu arquivo CSS personalizado (deve ser carregado após o Bootstrap) -->
+<link rel="stylesheet" href="path/to/your/custom-styles.css">
+
+<!-- Script para o funcionamento do Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    
+
+    <section class="carrossel-container">
+        <article id="noticia-principal">
+            <header id="cabecalho-artigo">
+                <hgroup>
+                    <h1 style="font-size: x-large; text-align: center; margin: 100px; margin-top: 30px;">
+                        Slide de Componentes do Tcc
+                    </h1>
+                </hgroup>
+            </header>
+    
+          
+    
+            <!-- Carrossel -->
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Adicionar 19 itens aqui -->
+                    <div class="carousel-item active">
+                        <img src="fotos/bateri.jpg" class="d-block w-100" style="max-height: 650px; object-fit: cover;" alt="Bateria Estacionária 70Ah">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Bateria Estacionária 70Ah</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="fotos/transistor.jpg" class="d-block w-100" style="max-height: 650px; object-fit: cover;" alt="transistor">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Transistor</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="fotos/ci.jpg" class="d-block w-100" style="max-height: 650px; object-fit: cover;" alt="CI">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>CI</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="fotos/trafo.jpg" class="d-block w-100" style="max-height: 650px; object-fit: cover;" alt="Transformador">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Transformador</h5>
+                        </div>
+                    </div>
+                    <!-- Adicionar mais itens (total 19) -->
+                    <div class="carousel-item">
+                        <img src="fotos/capacitor.jpg" class="d-block w-100" style="max-height: 650px; object-fit: cover;" alt="capacitor">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>capacitor</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="fotos/motor.jpg" class="d-block w-100" style="max-height: 650px; object-fit: cover;" alt="Motor">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Motor</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="fotos/cooler.jpg" class="d-block w-100" style="max-height: 650px; object-fit: cover;" alt="cooler">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Cooler</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="fotos/resistor.jpg" class="d-block w-100" style="max-height: 650px; object-fit: cover;" alt="Resistor">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Resistor</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="fotos/dissipador.jpg" class="d-block w-100" style="max-height: 650px; object-fit: cover;" alt="Dissipador">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Dissipador</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="fotos/djuntor.jpg" class="d-block w-100" style="max-height: 650px; object-fit: cover;" alt="Djuntorr">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Djuntor</h5>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <img src="fotos/medidor.jpg" class="d-block w-100" style="max-height: 650px; object-fit: cover;" alt="Medidor">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Medidor</h5>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <img src="fotos/tomada.jpg" class="d-block w-100" style="max-height: 650px; object-fit: cover;" alt="Tomada">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Tomada</h5>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <img src="fotos/djuntor.jpg" class="d-block w-100" style="max-height: 650px; object-fit: cover;" alt="Djuntorr">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Djuntor</h5>
+                        </div>
+                    </div>
+                    <!-- Continue com os outros itens até completar 19 -->
+                </div>
+                <!-- Controles -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </article>
+    </section>
+    
 
 
 <section corpo-full >
@@ -60,7 +212,7 @@
 		<header id="cabecalho-artigo">
 			<hgroup>
 				
-				<h1 style="    font-size: medium;
+				<h1 style="    font-size: x-large;
     text-align: center;
     margin: 100px;
     margin-top: 30px;">  Videos</h1>
@@ -69,31 +221,23 @@
 			</hgroup>
 		</header>
 
+        <div class="tv-molde">
+            <iframe class="video-iframe" src="https://www.youtube.com/embed/3dECTvUFBZU?si=5PwziWVD2DcaqgBw&amp;start=11" title="Protótipo do TCC" allowfullscreen></iframe>
+        </div>
 
 
 
 
+        
+        
 
- 		<div id="tv-radio">
- 			<audio id="musica">
-
-
- 			</audio>		
-
- 			<video id="filme" controls="controls">
- 				<source src="media/Video.webm" type="video/webm"/>
-
-
- 			</video>
- 			
- 		</div>
-
+        
 
 
 <footer id="rodape">
 <p>Copyright 2024 -  por Hódrigo Dionathan</a> </p>
 </footer>
-</div>
+
 </body>
 
 </html>
