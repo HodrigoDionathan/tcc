@@ -34,10 +34,35 @@
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra da descrição */
             background-color: #f9f9f9; /* Cor de fundo da descrição */
         }
+
+        .imagem-componente {
+            width: 100px; /* Ajuste o tamanho da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+            transition: transform 0.3s ease; /* Transição suave para o efeito de zoom */
+        }
+        
+        .imagem-componente:hover {
+            transform: scale(1.8); /* Aumenta o tamanho da imagem ao passar o mouse */
+            z-index: 1; /* Mantém a imagem em cima de outros elementos */
+        }
+        #pagina-especial {
+            background-color: #2d3764;
+            border-radius: 10px;
+            margin: 10px;
+            height: 2090px; /* Altura da página específica */
+        }
+        #noticia-principall {
+            background-color: #465cbd;
+    border-radius: 10px;
+    margin: 10px;
+        }
+        
     </style>
 </head>
 <script language="javascript" src="javascript/funcoes.js"></script>
-<body>
+<body id="pagina-especial">
+    
+
 
 <div id="interface">
     <div id="logotipo" style="
@@ -48,11 +73,11 @@
     ">
         <nav id="menu">
             <ul>
-                <li onmouseover="mudaFoto('imagens/home.png')" onmouseout="mudaFoto('imagens/especificacoes.png')"> <a href="index.html">Home</a></li>
+                <li onmouseover="mudaFoto('imagens/home.png')" onmouseout="mudaFoto('imagens/especificacoes.png')"> <a href="pindex.html">Home</a></li>
                 <li onmouseover="mudaFoto('imagens/especificacoes.png')" onmouseout="mudaFoto('imagens/especificacoes.png')"> <a href="specs.html">Especificações</a></li>
                 <li onmouseover="mudaFoto('imagens/fotos.png')" onmouseout="mudaFoto('imagens/especificacoes.png')"> <a href="fotos.html">Fotos</a></li>
                 <li onmouseover="mudaFoto('imagens/multimidia.png')" onmouseout="mudaFoto('imagens/especificacoes.png')"> <a href="multimidia.html">Multimídia</a></li>
-                <li onmouseover="mudaFoto('imagens/equipe1.png')" onmouseout="mudaFoto('imagens/especificacoes.png')"> <a href="Equipe.html">Equipe</a></li>
+                <li onmouseover="mudaFoto('imagens/equipe1.png')" onmouseout="mudaFoto('imagens/especificacoes.png')"> <a href="equipefaixa.html">Equipe</a></li>
             </ul>
         </nav>
         <img src="imagens/logotecnico.png" alt="Logotipo">
@@ -61,86 +86,190 @@
     <header id="cabecalho">
         <hgroup>
             <h1>Técnicos Por Vocação</h1>
-            <h2>Análise de Viabilidade de Motores Elétricos</h2>
+            <h2>Sistema Didático de Conversão e Geração de Energia</h2>
         </hgroup>
         <img id="icone" src="imagens/especificacoes.png"/>
     </header>
 
     <section corpo-full>
-        <article id="noticia-principal">
+        <article id="noticia-principall">
             <header id="cabecalho-artigo">
                 <hgroup>
-                    <h1 style="font-size: medium; text-align: center; margin: 100px; margin-top: 30px;">Raio-X do Projeto</h1>
+                    <h1 style="font-size: x-large; text-align: center; margin: 100px; margin-top: 30px;">Raio-X do Projeto</h1>
                 </hgroup>
             </header>
 
-            <p>A pesquisa visa investigar o potencial dos motores elétricos de operar indefinidamente com base na energia gerada por eles mesmos, explorando seus limites técnicos e as barreiras que impedem seu funcionamento contínuo sem fontes externas de energia.</p>
+            <p style="color:white;text-align: center;">DESCRIÇÃO DOS COMPONENTES E SUAS FUNÇÕES NO PROJETO</p>
 
             <section id="conteudo">
-                <img id="projeto-completo" src="imagens/projetoCompleto.jpg" alt="Projeto Completo">
+
+                <img id="projeto-completo" src="imagens/projetotcc.png" alt="Projeto Completo">
                 
                 <!-- Tabela de Componentes -->
                 <table class="tabela-componentes">
                     <thead>
                         <tr>
-                            <th>Componente</th>
+                            <th>Componentes</th>
                             <th>Descrição</th>
+                            <th>imagem</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Componente 1</td>
-                            <td>Descrição do Componente 1.</td>
+                            <td>Bateria 70Ah </td>
+                            
+                            <td>Bateria 70Ah Fornece uma fonte de corrente contínua 
+                                (12V DC) ao sistema. A capacidade de 70Ah indica 
+                                que ela pode fornecer 70 amperes por uma hora.
+                                Armazena energia e fornece corrente ao circuito para
+                                alimentar o motor e o transformador.</td>
+                                <td><img class="imagem-componente" src="imagens/bateria.png" alt="Bateria"/></td>
                         </tr>
                         <tr>
-                            <td>Componente 2</td>
-                            <td>Descrição do Componente 2.</td>
+                            <td>Transformador <br>12v DC/ 127v AC</td>
+                            <td>
+                                Usamos um  transformador 12V AC / 127V AC que  é um dispositivo elétrico, utilizado para elevar a tensão de 12V da bateria que está sendo chaveada no primário, para uma tensão de 127V AC </td>
+                            <td><img class="imagem-componente" src="imagens/trafo12.png" alt="Transformador"/></td>
                         </tr>
                         <tr>
-                            <td>Componente 3</td>
-                            <td>Descrição do Componente 3.</td>
+                            <td>Capacitor <br>10 uF</td>
+                            <td>Um dispositivo 
+                    que armazena 
+                            energia elétrica 
+                            temporariamente 
+                            e libera em 
+                            intervalos 
+                            controlados Ajuda a suavizar 
+                            as oscilações de 
+                            corrente e tensão, 
+                            e estabiliza a saída 
+                            do circuito, 
+                            minimizando o 
+                            ruído elétrico</td>
+                            <td><img class="imagem-componente" src="imagens/capacitor.png" alt="capacitor"/></td>
                         </tr>
                         <tr>
-                            <td>Componente 4</td>
-                            <td>Descrição do Componente 4.</td>
+                            <td>Motor <br>180W 127v</td>
+                            <td>Motor acionado 
+                                pela corrente 
+                                fornecida pela 
+                                bateria. 
+                                Ele possui um 
+                                eixo que gira 
+                                ao ser energizado. Atua como um motor de entrada que, ao girar,ajuda a 
+                                gerar energia por meio de acoplamento com ímãs 
+                                e o estator.</td>
+                                <td><img class="imagem-componente" src="imagens/motor180w.png" alt="motor eletrico"/></td>
+                            
                         </tr>
                         <tr>
-                            <td>Componente 5</td>
-                            <td>Descrição do Componente 5.</td>
+                            <td>Imãs de Neodímio</td>
+                            <td>Ímãs extremamente potentes, 
+                                comumente usados em sistemas 
+                                de geração de energia pela sua 
+                                força magnética. Geram um campo magnético que induz corrente 
+                                no estator quando o motor gira. Isso auxilia na geração 
+                                da corrente alternada.</td>
+                                <td><img class="imagem-componente" src="imagens/eixocomima.png" alt="eixo"/></td>
                         </tr>
                         <tr>
-                            <td>Componente 6</td>
-                            <td>Descrição do Componente 6.</td>
+                            <td>Estator</td>
+                            <td>Parte fixa de um motor ou gerador, 
+                                onde são colocados enrolamentos 
+                                de cobre.Induz a corrente alternada quando exposto ao campo 
+                                magnético criado pelos ímãs em movimento, facilitando 
+                                a geração de AC.</td>
+                                <td><img class="imagem-componente" src="imagens/estator.png" alt="estator"/></td>
                         </tr>
                         <tr>
-                            <td>Componente 7</td>
-                            <td>Descrição do Componente 7.</td>
+                            <td>Transistor<br> FGH40N60</td>
+                            <td>Componentes semicondutores usados 
+                                para amplificar ou chavear sinais elétricos.Atuam no controle do fluxo de corrente
+                                e ajudam a converter a corrente contínua
+                                em pulsos necessários para 
+                                criar a corrente alternada.</td>
+                                <td><img class="imagem-componente" src="imagens/transistor.png" alt="transistor"/></td>
                         </tr>
                         <tr>
-                            <td>Componente 8</td>
-                            <td>Descrição do Componente 8.</td>
+                            <td>CI SG 3525</td>
+                            <td>Circuito integrado responsável por gerar 
+                                uma onda de oscilação.Controla a frequência da corrente 
+                                alternada gerada pelo sistema, auxiliando 
+                                na conversão de DC para AC com um sinal
+                                controlado.</td>
+                            <td><img class="imagem-componente" src="imagens/ci3525.png" alt="ci sg 3525"/></td>
                         </tr>
                         <tr>
-                            <td>Componente 9</td>
-                            <td>Descrição do Componente 9.</td>
+                            <td>Dissipador<br> de calor</td>
+                            <td>Componente metálico usado para dispersar o calor 
+                                gerado pelos transistores e outros
+                                componentes. Dissipa o calor excessivo 
+                                gerado durante a operação, mantendo os 
+                                componentes em temperaturas 
+                                seguras e evitando superaquecimento..</td>
+                            <td><img class="imagem-componente" src="imagens/issipador.png" alt="disssipador"/></td>
                         </tr>
                         <tr>
-                            <td>Componente 10</td>
-                            <td>Descrição do Componente 10.</td>
+                            <td>Cooler</td>
+                            <td> E utilizado para remover o calor dos dissipadores resfriando os componentes. O ar é puxado através de um dissipador, que retira o calor.</td>
+                            <td><img class="imagem-componente" src="imagens/coller.png" alt="cooler"/></td>
                         </tr>
+                        <tr>
+                            <td>Resistor</td>
+                            <td>Componentes que oferecem resistência ao fluxo de 
+                            corrente, limitando e controlando a quantidade de 
+                            corrente que passa. Controlam a quantidade de corrente 
+                            em cada parte do circuito e protegem os componentes 
+                            sensíveis ao limitar a corrente elétrica. </td>
+                            <td><img class="imagem-componente" src="imagens/resistor.png" alt="cooler"/></td>
+                        </tr>
+
+                        <tr>
+                            <td>Djuntor 30Ah</td>
+                            <td>O disjuntor é um dispositivo de segurança que protege o 
+                                circuito contra sobrecargas e curtos-circuitos. 
+                                Ele monitora a corrente e desarma (desliga) 
+                                automaticamente caso a corrente ultrapasse o limite 
+                                seguro, evitando danos aos componentes e riscos de 
+                                incêndio.. </td>
+                            <td><img class="imagem-componente" src="imagens/djuntor.png" alt="cooler"/></td>
+                        </tr>
+                        <tr>
+                            <td>Tomada 10Ah</td>
+                            <td>As tomadas são os pontos de conexão onde cargas
+                                externas (como aparelhos ou dispositivos) podem ser 
+                                ligadas para receber a alimentação elétrica. Elas 
+                                fornecem uma maneira segura e padronizada para
+                                conectar e desconectar equipamentos ao sistema.</td>
+                            <td><img class="imagem-componente" src="imagens/tomada.png" alt="cooler"/></td>
+                        </tr>
+                        <tr>
+                            <td>Medidor de (Corrente/ Voltagem/Hz)</td>
+                            <td>Mede a tensão elétrica em circuitos, 
+                                corrente elétrica, frequência da corrente 
+                                alternada. Fornece mediçõesprecisas, 
+                                essenciais para diagnósticos e 
+                                manutenção é amplamente utilizado em 
+                                indústrias, laboratórios e em 
+                                instalações elétricas</td>
+                            <td><img class="imagem-componente" src="imagens/medidor.png" alt="cooler"/></td>
+                        </tr>
+                        
                     </tbody>
                 </table>
 
                 <!-- Descrição de Funcionamento -->
                 <div class="descricao-funcionamento">
-                    <h3>Descrição de Funcionamento</h3>
-                    <p>Aqui você pode inserir uma descrição detalhada sobre como o projeto funciona, explicando cada etapa do processo e a interação entre os componentes.</p>
+                    <h3  style="color:black;">Descrição de Funcionamento</h3>
+                    <p style="color:black;text-align: justify;"> protótipo de geração de energia elétrica opera inicialmente com uma bateria estacionária que fornece corrente contínua (DC). A corrente é regulada por um transistor, que controla a quantidade de carga que flui da bateria para o transformador. Este, por sua vez, converte a corrente contínua em corrente alternada (AC) com o auxilio de transistor . A corrente alternada alimenta um motor elétrico, que transforma a energia elétrica em movimento mecânico.
+
+                        Esse movimento aciona um eixo com ímãs de neodímio, que gira no centro de um estator, gerando assim energia alternada. A energia gerada é então distribuída por duas tomadas, simulando uma onda senoidal, além de contar com uma tomada adicional que fornece ondas quadradas, capazes de alimentar cargas mais potentes. </p>
                 </div>
             </section>
         </article>
 
         <footer id="rodape">
-            <p>Copyright 2024 - por Hodrigo Dionathan</p>
+            <p style="text-align: center;">Copyright 2024 -  Hodrigo Dionathan</p>
         </footer>
     </div>
 </body>
