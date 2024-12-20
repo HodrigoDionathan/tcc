@@ -21,7 +21,7 @@ iframe#frame-spec::-webkit-scrollbar {
 } 
 #projeto-completo {
     width: 100%; /* Ajuste conforme necessário */
-    max-width: 820px; /* Largura máxima da imagem */
+    max-width: 789px; /* Largura máxima da imagem */
     height: auto; /* Mantém a proporção da imagem */
     border: 5px solid #fff; /* Borda branca */
     box-shadow: 0px 4px 15px rgba(69, 80, 224, 0.685); /* Sombra ao redor */
