@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="csss/styles.css"/>
+    <title>Técnicos Por Vocação</title>
+    <style>
+        /* Ajuste básico */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('imagens/darkblue.jpg'); /* Caminho da imagem de fundo */
+            background-size: cover; /* A imagem cobre toda a tela */
+            background-position: center; /* A imagem é centralizada */
+            background-attachment: fixed; /* A imagem permanece fixa enquanto rola a página */
+            background-color: #2d3764; /* Fundo cinza escuro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        /* Centralizando o conteúdo */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        /* Efeito de brilho na imagem */
+        .glow-image {
+            position: relative;
+            filter: drop-shadow(0 0 20px rgba(172, 150, 150, 0.6));
+            animation: glow 3s infinite ease-in-out;
+            max-width: 50%; /* Ajusta para garantir que a imagem não exceda o tamanho da tela */
+            height: auto;
+        }
+
+        @keyframes glow {
+            0% {
+                filter: drop-shadow(0 0 20px rgba(233, 213, 213, 0.6));
+            }
+            50% {
+                filter: drop-shadow(0 0 30px rgb(145, 131, 131));
+            }
+            100% {
+                filter: drop-shadow(0 0 20px rgba(235, 230, 230, 0.6));
+            }
+        }
+
+        /* Estilizando o texto */
+        h1 {
+            font-family: math;
+            font-size: 1.5rem;
+            color: #cfcece;
+            margin-top: 117px;
+        }
+
+        h2 {
+            font-family: math;
+            font-size: 1rem;
+            color: #d8d6d6;
+            justify-content: center;
+        }
+
+        /* Estilo dos links */
+        .topics {
+            margin-top: 20px;
+        }
+
+        .topics a {
+            display: block; /* Cada link ocupa uma linha */
+            text-decoration: none; /* Remove o sublinhado */
+            font-size: 1.2rem;
+            color: white;
+            margin: 10px 0; /* Espaçamento entre os links */
+            padding: 10px;
+            background-color: #000; /* Fundo escuro */
+            border-radius: 8px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Efeito de hover nos links */
+        .topics a:hover {
+            transform: scale(1.1); /* Aumenta o link ao passar o mouse */
+            background-color: #f0a500; /* Altera a cor para um tom dourado */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <img src="imagens/tecnicologom.png" alt="Logo da Empresa" class="glow-image">
+           
+
+            <!-- Tópicos organizados um abaixo do outro -->
+            <div class="topics">
+                <a href="pindex.html" title="Página 1">TCC ELETROTECNICA</a>
+                <a href="climatizador.pdf" title="Página 2">TCC REFRIGERAÇÃO INDUSTRIAL</a>
+                <a href="automacao.html" title="Página 3">TCC AUTOMAÇÃO INDUSTRIAL</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
