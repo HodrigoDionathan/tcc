@@ -34,3 +34,17 @@ iframe#frame-spec::-webkit-scrollbar {
     transform: scale(1.05); /* Zoom suave */
     box-shadow: 0px 8px 20px rgba(82, 50, 228, 0.774); /* Sombra mais intensa */
 }
+.botao-download {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #1f8ae8;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-download:hover {
+    background-color: #155a9a;
+}
