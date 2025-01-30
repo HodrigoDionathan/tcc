@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente Virtual - TCC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .chat-button {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            padding: 12px 20px;
+            background: #1a237e;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .chat-container {
+            position: fixed;
+            right: 20px;
+            bottom: 80px;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: none;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        .chat-container.active {
+            display: flex;
+        }
+
+        .chat-header {
+            background: #1a237e;
+            color: white;
+            padding: 15px;
+            border-radius: 5px 5px 0 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px;
+        }
+
+        .message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 80%;
+            line-height: 1.4;
+        }
+
+        .bot-message {
+            background: #f5f5f5;
+            margin-right: auto;
+            color: #333;
+        }
+
+        .user-message {
+            background: #1a237e;
+            color: white;
+            margin-left: auto;
+        }
+
+        .chat-input {
+            padding: 15px;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 10px;
+        }
+
+        #user-input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        #send-button {
+            padding: 8px 15px;
+            background: #1a237e;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-button" onclick="toggleChat()">
+        Assistente Virtual
+    </div>
+
+    <div class="chat-container" id="chat-container">
+        <div class="chat-header">
+            <div>Assistente Virtual - TCC</div>
+            <span onclick="toggleChat()" style="cursor:pointer">×</span>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+                Olá! Sou o assistente virtual do projeto. Como posso ajudar?
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Digite sua pergunta...">
+            <button id="send-button">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        const chatMessages = document.getElementById('chat-messages');
+        const userInput = document.getElementById('user-input');
+        const sendButton = document.getElementById('send-button');
+
+        const respostas = {
+            // Componentes Principais
+            'bateria': `Sobre a bateria do nosso projeto:
+A bateria é um componente fundamental, com as seguintes especificações técnicas:
+- Modelo: Estacionária 12V, 70Ah
+- Capacidade: Fornece até 70 amperes por hora
+- Tensão: Opera em 12V DC
+- Voltagem: Opera em 12V DC
+- Função principal: Alimenta todo o sistema inicial
+- Custo: Investimento de R$700,00
+- Durabilidade: 3-5 anos com manutenção adequada
+
+É interessante notar que escolhemos este modelo específico pela sua excelente relação entre capacidade e confiabilidade.`,
+
+            'transistor': `Sobre os transistores utilizados:
+Utilizamos 2 transistores IGBT FGH60N60, que são componentes essenciais para o projeto:
+- Sua Capacidade Suporta até 600V e 60A.
+- E tem a Função de Realizar o chaveamento eletrônico.
+- Configuração: Montados em ponte H completa.
+- Trabalham com uma frequência de 100kHz.
+- Seu Custo foi de  R$9,17 cada unidade.
+
+Estes transistores são fundamentais para converter a corrente DC em AC de forma eficiente.`,
+
+            'transformador': `Detalhes do nosso transformador:
+Este componente é crucial para elevar a tensão do sistema:
+- Entrada: Recebe 12V DC chaveado
+- Saída: Fornece 127V AC em onda quadrada
+- Potência: 250W nominal
+- Eficiência: Alcança 85%
+- Núcleo: Construído em Ferrite
+- Isolação: Classe H para máxima segurança
+- Custo: R$250,00
+
+É um dos componentes mais importantes para a conversão de energia.`,
+
+            'motor': `Características do motor elétrico:
+Nosso motor foi escolhido com cuidado para atender os requisitos do projeto:
+- Potência: 180W de capacidade
+- Alimentação: 127V AC
+- Velocidade: 1500 RPM
+- Tipo: Monofásico
+- Isolamento: Classe B
+- Eficiência: 75%
+- Custo: R$180,00
+
+Este motor é responsável pela conversão da energia elétrica em mecânica.`,
+
+            'funcionamento': `Como nosso sistema funciona:
+O processo ocorre em etapas bem definidas:
+
+1. Início com a Bateria (12V, 70Ah)
+   → Fornece a energia inicial em corrente contínua
+
+2. Processo de Chaveamento
+   → Os transistores IGBT modulam a corrente
+
+3. Controle Preciso
+   → O CI SG3525 gera os pulsos PWM necessários
+
+4. Elevação da Tensão
+   → O transformador converte 12V DC para 127V AC
+
+5. Conversão Mecânica
+   → O motor transforma energia elétrica em movimento
+
+6. Geração de Energia
+   → Os ímãs em rotação induzem corrente no estator
+
+7. Saída Final
+   → Fornecemos 127V/60Hz para uso
+
+Cada etapa foi cuidadosamente projetada para máxima eficiência.`,
+
+            'especificacoes': `Especificações técnicas do sistema:
+
+Entrada do Sistema:
+- Tensão: 12V DC (variação máxima de ±0.5V)
+- Corrente: Até 70A
+- Potência de entrada: 840W máximo
+
+Saída do Sistema:
+- Tensão em onda quadrada: 127V ±5%
+- Tensão senoidal: 127V ±3%
+- Frequência: 60Hz (variação máxima de ±0.5Hz)
+- Potência útil disponível: ~140W
+
+Eficiência do Sistema:
+- Rendimento global: 75-80%
+- Perdas totais: 15-20% (incluindo perdas térmicas)
+
+Estes valores foram obtidos após diversos testes e otimizações.`,
+
+            'orcamento': `Investimento detalhado do projeto:
+
+Componentes Principais:
+→ Bateria 70Ah: R$700,00
+→ Conjunto de transistores: R$55,00
+→ Transformador: R$250,00
+→ Motor 180W: R$180,00
+→ Ímãs especiais: R$160,00
+→ Estator adaptado: R$120,00
+
+Componentes Complementares:
+→ Conjunto de resistores: R$30,00
+→ Capacitor: R$20,00
+→ Sistema de tomadas: R$22,00
+→ Fiação completa: R$100,00
+→ Proteções elétricas: R$20,00
+→ Sistema de refrigeração: R$50,00
+→ Instrumentação: R$55,00
+
+Investimento total: R$1.862,00
+
+Cada componente foi selecionado considerando a melhor relação custo-benefício.`,
+
+            'default': `Olá! Posso fornecer informações técnicas detalhadas sobre:
+
+1. Componentes do sistema (bateria, transistor, transformador, motor)
+2. Processo de funcionamento
+3. Especificações elétricas
+4. Detalhes do orçamento
+5. Processo de conversão de energia
+
+Sobre qual aspecto você gostaria de saber mais?`
+        };
+
+        function adicionarMensagem(mensagem, tipo) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${tipo}-message`;
+            messageDiv.textContent = mensagem;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function processarPergunta(pergunta) {
+            pergunta = pergunta.toLowerCase();
+            let resposta = respostas['default'];
+
+            for (let palavra in respostas) {
+                if (pergunta.includes(palavra)) {
+                    resposta = respostas[palavra];
+                    break;
+                }
+            }
+
+            return resposta;
+        }
+
+        function enviarMensagem() {
+            const mensagem = userInput.value.trim();
+            if (mensagem) {
+                adicionarMensagem(mensagem, 'user');
+                const resposta = processarPergunta(mensagem);
+                setTimeout(() => adicionarMensagem(resposta, 'bot'), 500);
+                userInput.value = '';
+            }
+        }
+
+        sendButton.addEventListener('click', enviarMensagem);
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                enviarMensagem();
+            }
+        });
+
+        // Função para alternar a visibilidade do chat
+        function toggleChat() {
+            const chatContainer = document.getElementById('chat-container');
+            chatContainer.classList.toggle('active');
+        }
+    </script>
+</body>
+</html> 
